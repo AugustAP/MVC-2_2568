@@ -36,7 +36,7 @@ public class NewClaimView extends JFrame {
         JPanel headerPanel = new JPanel();
         headerPanel.setBackground(Color.WHITE);
         JLabel titleLabel = new JLabel("ยื่นคำขอเยียวยาใหม่");
-        titleLabel.setFont(new Font("Tahoma", Font.BOLD, 28));
+        titleLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
         titleLabel.setForeground(new Color(25, 118, 210));
         headerPanel.add(titleLabel);
 
@@ -51,8 +51,8 @@ public class NewClaimView extends JFrame {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        Font labelFont = new Font("Tahoma", Font.BOLD, 18);
-        Font fieldFont = new Font("Tahoma", Font.PLAIN, 16);
+        Font labelFont = new Font("Tahoma", Font.BOLD, 16);
+        Font fieldFont = new Font("Tahoma", Font.PLAIN, 14);
 
         // First Name
         gbc.gridx = 0;
@@ -104,7 +104,7 @@ public class NewClaimView extends JFrame {
         gbc.gridy = 3;
         gbc.gridwidth = 2;
         btnCalculate = new JButton("คำนวณเงินเยียวยา");
-        btnCalculate.setFont(new Font("Tahoma", Font.BOLD, 18));
+        btnCalculate.setFont(new Font("Tahoma", Font.BOLD, 16));
         btnCalculate.setBackground(new Color(255, 152, 0));
         btnCalculate.setForeground(Color.BLACK); // เปลี่ยนเป็นสีดำ
         btnCalculate.setFocusPainted(false);
@@ -132,7 +132,7 @@ public class NewClaimView extends JFrame {
 
         resultGbc.gridx = 1;
         lblClaimType = new JLabel("-");
-        lblClaimType.setFont(new Font("Tahoma", Font.BOLD, 20));
+        lblClaimType.setFont(new Font("Tahoma", Font.BOLD, 18));
         lblClaimType.setForeground(new Color(56, 142, 60));
         resultPanel.add(lblClaimType, resultGbc);
 
@@ -146,7 +146,7 @@ public class NewClaimView extends JFrame {
 
         resultGbc.gridx = 1;
         lblCompensationAmount = new JLabel("-");
-        lblCompensationAmount.setFont(new Font("Tahoma", Font.BOLD, 24));
+        lblCompensationAmount.setFont(new Font("Tahoma", Font.BOLD, 20));
         lblCompensationAmount.setForeground(new Color(56, 142, 60));
         resultPanel.add(lblCompensationAmount, resultGbc);
 
@@ -155,7 +155,7 @@ public class NewClaimView extends JFrame {
         buttonPanel.setBackground(Color.WHITE);
 
         btnSubmit = new JButton("ยืนยันการยื่นคำขอ");
-        btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 18));
+        btnSubmit.setFont(new Font("Tahoma", Font.BOLD, 16));
         btnSubmit.setBackground(new Color(76, 175, 80));
         btnSubmit.setForeground(Color.BLACK); // เปลี่ยนเป็นสีดำ
         btnSubmit.setFocusPainted(false);
@@ -164,7 +164,7 @@ public class NewClaimView extends JFrame {
         btnSubmit.setEnabled(false);
 
         btnCancel = new JButton("ยกเลิก");
-        btnCancel.setFont(new Font("Tahoma", Font.BOLD, 18));
+        btnCancel.setFont(new Font("Tahoma", Font.BOLD, 16));
         btnCancel.setBackground(new Color(244, 67, 54));
         btnCancel.setForeground(Color.BLACK); // เปลี่ยนเป็นสีดำ
         btnCancel.setFocusPainted(false);

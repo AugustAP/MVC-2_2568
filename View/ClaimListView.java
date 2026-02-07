@@ -33,7 +33,7 @@ public class ClaimListView extends JFrame {
         // Header Panel
         JPanel headerPanel = new JPanel(new BorderLayout());
         JLabel titleLabel = new JLabel("รายการคำขอเยียวยาทั้งหมด", JLabel.CENTER);
-        titleLabel.setFont(new Font("Tahoma", Font.BOLD, 28));
+        titleLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
         titleLabel.setForeground(new Color(25, 118, 210));
         headerPanel.add(titleLabel, BorderLayout.CENTER);
 
@@ -47,11 +47,11 @@ public class ClaimListView extends JFrame {
             }
         };
         claimTable = new JTable(tableModel);
-        claimTable.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        claimTable.setFont(new Font("Tahoma", Font.PLAIN, 14));
         claimTable.setRowHeight(30);
         claimTable.setForeground(Color.BLACK); // ตัวอักษรในตารางเป็นสีดำ
         claimTable.setBackground(Color.WHITE); // พื้นหลังตารางเป็นสีขาว
-        claimTable.getTableHeader().setFont(new Font("Tahoma", Font.BOLD, 18));
+        claimTable.getTableHeader().setFont(new Font("Tahoma", Font.BOLD, 16));
         claimTable.getTableHeader().setBackground(new Color(25, 118, 210));
         claimTable.getTableHeader().setForeground(Color.BLACK); // เปลี่ยนเป็นสีดำ
 
@@ -63,7 +63,7 @@ public class ClaimListView extends JFrame {
         buttonPanel.setBackground(Color.WHITE);
 
         btnNewClaim = new JButton("ยื่นคำขอเยียวยาใหม่");
-        btnNewClaim.setFont(new Font("Tahoma", Font.BOLD, 18));
+        btnNewClaim.setFont(new Font("Tahoma", Font.BOLD, 16));
         btnNewClaim.setBackground(new Color(76, 175, 80));
         btnNewClaim.setForeground(Color.BLACK); // เปลี่ยนเป็นสีดำ
         btnNewClaim.setFocusPainted(false);
@@ -71,7 +71,7 @@ public class ClaimListView extends JFrame {
         btnNewClaim.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         btnRefresh = new JButton("รีเฟรช");
-        btnRefresh.setFont(new Font("Tahoma", Font.BOLD, 18));
+        btnRefresh.setFont(new Font("Tahoma", Font.BOLD, 16));
         btnRefresh.setBackground(new Color(33, 150, 243));
         btnRefresh.setForeground(Color.BLACK); // เปลี่ยนเป็นสีดำ
         btnRefresh.setFocusPainted(false);

@@ -29,23 +29,23 @@ public class LoginView extends JFrame {
         gbc.insets = new Insets(10, 10, 10, 10);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        Font labelFont = new Font("Tahoma", Font.BOLD, 18);
-        Font fieldFont = new Font("Tahoma", Font.PLAIN, 16);
-        Font btnFont = new Font("Tahoma", Font.BOLD, 18);
+        Font labelFont = new Font("Tahoma", Font.BOLD, 16);
+        Font fieldFont = new Font("Tahoma", Font.PLAIN, 14);
+        Font btnFont = new Font("Tahoma", Font.BOLD, 16);
 
         // Title
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 2;
         JLabel lblTitle = new JLabel("เข้าสู่ระบบ", JLabel.CENTER);
-        lblTitle.setFont(new Font("Tahoma", Font.BOLD, 32));
+        lblTitle.setFont(new Font("Tahoma", Font.BOLD, 28));
         lblTitle.setForeground(new Color(25, 118, 210));
         mainPanel.add(lblTitle, gbc);
 
         // Subtitle
         gbc.gridy = 1;
         JLabel lblSub = new JLabel("กรุณากรอกข้อมูลเพื่อเข้าใช้งาน", JLabel.CENTER);
-        lblSub.setFont(new Font("Tahoma", Font.PLAIN, 20));
+        lblSub.setFont(new Font("Tahoma", Font.PLAIN, 16));
         lblSub.setForeground(Color.BLACK); // สีดำ
         mainPanel.add(lblSub, gbc);
 
@@ -93,7 +93,7 @@ public class LoginView extends JFrame {
         // Separator
         gbc.gridy = 5;
         JLabel lblOr = new JLabel("- หรือ -", JLabel.CENTER);
-        lblOr.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        lblOr.setFont(new Font("Tahoma", Font.PLAIN, 14));
         lblOr.setForeground(Color.GRAY);
         mainPanel.add(lblOr, gbc);
 
