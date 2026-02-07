@@ -163,7 +163,7 @@ public class ClaimController {
                     String id = generateClaimantId();
                     String newItemType = (monthlyIncome < 6500) ? "รายได้น้อย"
                             : (monthlyIncome >= 50000 ? "รายได้สูง" : "ทั่วไป");
-                    claimantToSave = new Claimant(id, f, l, monthlyIncome, newItemType, "user" + id, "1234");
+                    claimantToSave = new Claimant(id, f, l, monthlyIncome, newItemType, "" + id, "1234");
                     database.addClaimant(claimantToSave);
                 }
             }

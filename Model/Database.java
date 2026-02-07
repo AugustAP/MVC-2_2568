@@ -82,7 +82,7 @@ public class Database {
                             parts[2].trim(),
                             Double.parseDouble(parts[3].trim()),
                             parts[4].trim(),
-                            "user" + parts[0].trim(),
+                            "" + parts[0].trim(),
                             "1234" // Default pass
                     );
                     claimants.add(claimant);
