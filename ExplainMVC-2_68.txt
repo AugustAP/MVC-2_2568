@@ -1,0 +1,12 @@
+Model
+- Claim.java, HighIncomeClaim.java, LowIncomeClaim.java : เป็น class ของคำขอเยียวยา โดยภายในจะมีส่วนที่จะคำนวนเงินเยียวยาว่ารายได้เท่านี้จะได้รับเงินเยียวยาเท่าไหร่ ซึ่งจะต่างกันไปในแต่ละประเภทรายได้
+- Claimant.java, Policy.java, Compensation.java : เป็น class ไว้สำหรับรองรับข้อมูลจากไฟล์ csv
+- UserRole.java : มีไว้เพื่อกำหนดว่าเป็น ประชาชน หรือ เจ้าหน้าที่ 
+- Database.java : ทำหน้าที่อัปเดตข้อมูลใน csv และ นำข้อมูลจาก csv มาแปลงเป็น object เพื่อใช้งาน
+View 
+- LoginView.java : เป็นหน้าต่างสำหรับการกรอกข้อมูลใน การ login เข้าสู่ระบบ โดยจะมี AuthenticationController.java คอยติดต่อกับ database เพื่อเช็ค username password ของ ผู้ขอเยียวยา
+- ClaimListView.java : เป็นหน้าต่างสำหรับแสดงรายการคำขอทั้งหมด พร้อมทั้งบอกสถานะปัจจุบัน โดยจะมีปุ่มให้กดเพื่อยื่นคำขอ เมื่อกดจะพาไปยังหน้ายื่นคำขอ และปุ่มให้กดเพื่อ refresh หน้าหลัก
+- NewClaimView.java : เป็นหน้าต่างสำหรับกรอกคำขอเยียวยาโดยจะให้กรอก ชื่อ นามสกุล และ รายได้ต่อเดือน เมื่อ กดปุ่มเยียวยาแล้วจะไปติดต่อกับ ClaimController.java เพื่อนำ รายได้ต่อเดือน ที่ได้ไปหาว่าเป็นบุคคลประเภทไหน และจะได้รับเงินเยียวยาเท่าไหร่อีกที ใน Claim.java/HighIncomeClaim.java/LowIncomeClaim.java และมีปุ่ม ยืนยันเพื่อเก็บข้อมูลลง ไฟล์ csv แล้วพากลับไปยังหน้าแสดงรายการคำขอทั้งหมด
+Controller
+- AuthenticationController.java :  เป็นตัวดึงข้อมูลจาก Database.java ในส่วนของ username password มาเทียบกับ username password ที่รับมาจาก LoginView.java และมีส่วนจัดการสำหรับผู้ใช้งานใหม่ด้วย
+- ClaimController : เป็นตัวจัดการหลัก โดยจะมีส่วนของการนำ list ของ Claim ส่งไปให้ ClaimListView เพื่อแสดงผล และ เป็นตัวกลางในการรับส่งข้อมูลรายได้เพื่อนำไปคำนวณเงินเยียวยา พร้อมทั้งมีการส่งข้อมูลที่ได้จาก NewClaimView.java ไปให้ Database.java ทำการเพิ่มข้อมูลลงไปใน ไฟล์ csv
